@@ -1,0 +1,20 @@
+Main background image:
+http://unsplash.com/
+
+iPhone screenshots:
+https://dribbble.com/shots/1428271-iOS7-Challenge-App
+
+iPhone PSD:
+https://dribbble.com/shots/661417-iPhone-holding-hand-Free-PSD
+
+iPad air PSD:
+http://www.tricky-photoshop.com/apple-ipad-air-psd/
+
+Font-Awesome:
+http://fortawesome.github.io/Font-Awesome/
+
+Google Fonts (Roboto & Noto):
+https://www.google.com/fonts
+
+Bootstrap:
+http://getbootstrap.com/
