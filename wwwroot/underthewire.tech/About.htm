@@ -6,6 +6,7 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
+<link rel="shortcut icon" href="assets\img\powershell.ico" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
@@ -30,11 +31,80 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+<script type="text/javascript">
+<!--
+    function expand_collapse(id) {
+       var e = document.getElementById(id);
+       var f = document.getElementById(id+"_arrows");
+       if(e.style.display == 'none'){
+          e.style.display = 'block';
+          f.innerHTML = '&#9650';
+       }
+       else {
+          e.style.display = 'none';
+          f.innerHTML = '&#9660';
+       }
+    }
+//-->
+</script>
+<style type="text/css">
+.arrows{text-decoration:none;color:silver;}
+</style>
     </head>
 <body>
    
 <!-- Navigation -->
-<div  class="for-full-back "  id="custom_header" >
+	
+
+<style>
+
+H1 {
+	margin-bottom: 20px;
+	text-align:center;
+}
+ul.title {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+	width: 100%;
+        position:relative;
+        z-index: 99;
+
+
+		
+}
+
+li {
+    float: left;
+	width: 24%;
+   	margin: 0 2px;
+        position:relative;
+	z-index: 99;
+	text-align:center;
+	overflow: hidden;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+
+}
+
+li a:hover {
+    background-color: #3D3D3D;
+}
+</style>
+</head>
+<body>
+
+<ul class="title">
+<div  class="for-full-back" style="color:#ffffff;font-size:30pt" align="center" id="custom_header" >
                         
                            
                 
@@ -43,6 +113,8 @@
          Under The Wire
          
             </div>
+</ul>
+
 <style>
 
 H1 {
@@ -94,7 +166,7 @@ li a:hover {
   <li><a class="active" href="index.htm">Home</a></li>
   <li><a href="wargames.htm">Wargames</a></li>
   <li><a href="index.htm#contact-sec">Contact</a></li>
-  <li><a href="#about.htm">About</a></li>
+  <li><a href="about.htm">About</a></li>
 </ul>
 
 </body>
@@ -119,7 +191,7 @@ li a:hover {
 <br>
 <br>
 		
-&nbsp; &nbsp; &nbsp;   Under the Wire was conceived on a business trip between two co-workers.  One was a skilled cyber security technician rapidly developing experience in the field.  The other an experienced operations manager entering the cybersecurity field seeking to develop technical skill.  They both were fond of fun and engaging linux command line wargame called Over the Wire (www.overthewire.org). They enjoyed the wargames and were impressed with the impact that it had on their technical development.  As time progressed, they realized that their business's computing environment was a Windows Enterprise not a Linux environment.  That was about the time when one proclaimed to the other, "If only there was PowerShell Training for the People, so the People might be strong and powerful". The cry for knowledge was heard and accepted as they set forth on the venture to fill the gap.
+&nbsp; &nbsp; &nbsp;   Under the Wire was conceived on a business trip between two co-workers in 2015.  One was a skilled cyber security technician rapidly developing experience in the field.  The other an experienced operations manager entering the cybersecurity field seeking to develop technical skill.  They both were fond of the fun and engaging linux command line wargame called Over the Wire (www.overthewire.org). They enjoyed the wargames and were impressed with the impact that it had on their technical development.  As time progressed, they realized that their business' computing environment was a Windows Enterprise not a Linux environment.  That was about the time when one proclaimed to the other, "If only there was PowerShell Training for the People, so the People might be strong and powerful". The cry for knowledge was heard and accepted as they set forth on the venture to fill the gap.
 <br>
 <br>
 &nbsp; &nbsp; &nbsp;     Naturally, this is a dramatization.  The truth that two grown men spent an evening professing the merits of PowerShell training instead of turning a local bar upside down is too sad to tell.  To pay homage to the fine work of the Over the Wire team, the creators of PowerShell Training for the People affectionately named the environment Under the Wire.
