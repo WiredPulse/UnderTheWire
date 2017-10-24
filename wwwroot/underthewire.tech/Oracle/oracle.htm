@@ -166,7 +166,7 @@ li a:hover {
 <ul>
   <li><a class="active" href="../index.htm">Home</a></li>
   <li><a href="../wargames.htm">Wargames</a></li>
-  <li><a href="../../index.htm#contact-sec">Contact</a></li>
+  <li><a href="../../help.htm">Help</a></li>
   <li><a href="../about.htm">About</a></li>
 </ul>
 
@@ -189,44 +189,77 @@ li a:hover {
 		    <font face="arial" color="#000000" size="3">
 
 
-			<a href="oracle.htm">Level 0 &#8702 1</a>
+			<a href="oracle.htm">Oracle 0 &#8702 1</a>
 			<br>
-			<a href="oracle1.htm">Level 1 &#8702 2</a>
+			<a href="oracle1.htm">Oracle 1 &#8702 2</a>
 			<br>
-			<a href="oracle2.htm">Level 2 &#8702 3</a>
+			<a href="oracle2.htm">Oracle 2 &#8702 3</a>
 			<br>
-			<a href="oracle3.htm">Level 3 &#8702 4</a>
+			<a href="oracle3.htm">Oracle 3 &#8702 4</a>
 <br>
-			<a href="oracle4.htm">Level 4 &#8702 5</a>
+			<a href="oracle4.htm">Oracle 4 &#8702 5</a>
 <br>
-			<a href="oracle5.htm">Level 5 &#8702 6</a>
+			<a href="oracle5.htm">Oracle 5 &#8702 6</a>
 <br>
-			<a href="oracle6.htm">Level 6 &#8702 7</a>
+			<a href="oracle6.htm">Oracle 6 &#8702 7</a>
 <br>
-			<a href="oracle7.htm">Level 7 &#8702 8</a>
+			<a href="oracle7.htm">Oracle 7 &#8702 8</a>
 <br>
-			<a href="oracle8.htm">Level 8 &#8702 9</a>
+			<a href="oracle8.htm">Oracle 8 &#8702 9</a>
 <br>
-			<a href="oracle9.htm">Level 9 &#8702 10</a>
+			<a href="oracle9.htm">Oracle 9 &#8702 10</a>
 <br>
-			<a href="oracle10.htm">Level 10 &#8702 11</a>
+			<a href="oracle10.htm">Oracle 10 &#8702 11</a>
 <br>
-			<a href="oracle11.htm">Level 11 &#8702 12</a>
+			<a href="oracle11.htm">Oracle 11 &#8702 12</a>
 <br>
-			<a href="oracle12.htm">Level 12 &#8702 13</a>
+			<a href="oracle12.htm">Oracle 12 &#8702 13</a>
 <br>
-			<a href="oracle13.htm">Level 13 &#8702 14</a>
+			<a href="oracle13.htm">Oracle 13 &#8702 14</a>
 <br>
-			<a href="oracle14.htm">Level 14 &#8702 15</a>
+			<a href="oracle14.htm">Oracle 14 &#8702 15</a>
 <br>
-			<a href="oracle15.htm">Level 15</a>
+			<a href="oracle15.htm">Oracle 15</a>
 		    </font>
 		</td>
 	<td width="750" valign="top">
  	   <font face="arial" color="000000" size="4">
 
 		
-The goal of this oracleis to log into the game. In order to access the game, you will need to import the server's certificate and start a remote interactive session with the game server. 
+The goal of this level is to log into the game. In order to access the game, choose one of the two options below. 
+<br>
+<br>
+We recommend using SSH as PSRemoting is in the experimental state. No functionality is lost with SSH as you will be dropped into a PowerShell console. 
+<br>
+<br>
+
+<b><u>Option One - SSH (Preferred Method)</u></b>
+<br>
+<br>
+1. You will need a SSH client such as Putty. The host to which you need to connect is <b>oracle.underthewire.tech</b>, on port <b>6003</b>.
+<br>
+<br>
+2. When prompted, use the below credentials.
+<br>
+&nbsp; &nbsp; &nbsp;&nbsp; Username: oracle1<br>
+&nbsp; &nbsp; &nbsp;&nbsp; Password: oracle1
+<br>
+<br>
+3. You have successfully connected to the game server when your path changes to "[oracle.underthewire.tech]:"
+<br>
+<br>
+<br>
+<br>
+<b><u>Option Two - PSRemoting</u></b>
+<br>
+<br>
+Known Issues:<br>
+- Some users report connection errors when attempting to enter a PSSession.<br>
+
+- Some users may experience a "max user" error when going from level to level. This is due to a limitation from Microsoft with the number of concurrent users using PSRemoting. The error usually resolves itself within a few minutes. 
+<br>
+<br>
+You will need to import the server's certificate and start a remote interactive session with the game server. 
 <br>
 <br>
 1. Open PowerShell on your system.
@@ -248,7 +281,7 @@ Test-WSMan -ComputerName oracle.underthewire.tech -port 6004 -UseSSL
 <br>
 3. Copy and paste the below to initiate the connection to the game server. You will need to do this for each oracleyou log into as well.<br>
 <pre class="prettyprint">
-Enter-PSSession -ComputerName oracle.underthewire.tech -UseSSL -port 6004 -ConfigurationName UTW -Credential (Get-Credential)
+Enter-PSSession -ComputerName oracle.underthewire.tech -UseSSL -port 6004 -Credential (Get-Credential)
 </pre>
 <br>
 4. When prompted, use the below credentials.
@@ -257,9 +290,11 @@ Enter-PSSession -ComputerName oracle.underthewire.tech -UseSSL -port 6004 -Confi
 &nbsp; &nbsp; &nbsp;&nbsp; Password: oracle1
 <br>
 <br>
-
-
 5. You have successfully connected to the game server when your path changes to "[trebek.underthewire.tech]:"
+<br>
+<br>
+<br>
+<br>
 
 
 	   </font>
