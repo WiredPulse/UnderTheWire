@@ -225,8 +225,40 @@ li a:hover {
 	<td width="750" valign="top">
  	   <font face="arial" color="000000" size="4">
 
+The goal of this level is to log into the game. In order to access the game, choose one of the two options below. 
+<br>
+<br>
+We recommend using SSH as PSRemoting is in the experimental state. No functionality is lost with SSH as you will be dropped into a PowerShell console. 
+<br>
+<br>
 
-The goal of this level is to log into the game. In order to access the game, you will need to import the server's certificate and start a remote interactive session with the game server.
+<b><u>Option One - SSH (Preferred Method)</u></b>
+<br>
+<br>
+1. You will need a SSH client such as Putty. The host to which you need to connect is <b>groot.underthewire.tech</b>, on port <b>6007</b>.
+<br>
+<br>
+2. When prompted, use the below credentials.
+<br>
+&nbsp; &nbsp; &nbsp;&nbsp; Username: groot1<br>
+&nbsp; &nbsp; &nbsp;&nbsp; Password: groot1
+<br>
+<br>
+3. You have successfully connected to the game server when your path changes to "groot.underthewire.tech]:"
+<br>
+<br>
+<br>
+<br>
+<b><u>Option Two - PSRemoting</u></b>
+<br>
+<br>
+Known Issues:<br>
+- Some users report connection errors when attempting to enter a PSSession.<br>
+
+- Some users may experience a "max user" error when going from level to level. This is due to a limitation from Microsoft with the number of concurrent users using PSRemoting. The error usually resolves itself within a few minutes. 
+<br>
+<br>
+You will need to import the server's certificate and start a remote interactive session with the game server. 
 <br>
 <br>
 1. Open PowerShell on your system.
@@ -234,7 +266,6 @@ The goal of this level is to log into the game. In order to access the game, you
 <br>
 2. Copy and paste the below in order to import the certificate for the game server. Without this, you will not be able to connect to it.
 <br>
-
 <pre class="prettyprint">
 $webRequest = [Net.WebRequest]::Create("https://groot.underthewire.tech:6008/wsman")
 try { $webRequest.GetResponse() } catch {}
@@ -248,7 +279,7 @@ Test-WSMan -ComputerName groot.underthewire.tech -port 6008 -UseSSL
 <br>
 3. Copy and paste the below to initiate the connection to the game server. You will need to do this for each level you log into as well.<br>
 <pre class="prettyprint">
-Enter-PSSession -ComputerName groot.underthewire.tech -UseSSL -port 6008 -ConfigurationName UTW -Credential (Get-Credential)
+Enter-PSSession -ComputerName groot.underthewire.tech -UseSSL -port 6008 -Credential (Get-Credential)
 </pre>
 <br>
 4. When prompted, use the below credentials.
@@ -257,9 +288,11 @@ Enter-PSSession -ComputerName groot.underthewire.tech -UseSSL -port 6008 -Config
 &nbsp; &nbsp; &nbsp;&nbsp; Password: groot1
 <br>
 <br>
-
-
 5. You have successfully connected to the game server when your path changes to "[groot.underthewire.tech]:"
+<br>
+<br>
+<br>
+<br>
 
 
 	   </font>
